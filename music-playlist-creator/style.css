@@ -1,6 +1,40 @@
 body {
     font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
+    margin: 30;
+    padding: 10;
+    background-color: #FFE5E5;
+}
+/* remember dot is tag, access to rest is **/
+#header {
+    font-family: 'sans-serif';
+    background: #FFF5F5;  /* FFF5F5 */
+    padding: 10px;
+}
+.playlist-cards{
+    width:100%
+}
+.card {
+    background-color:#FFCCCC;
+    border-radius: 12px;
+    border: rounded;
+    width: 20vw;
+    height: 30vw;
+    
+}
+.image{
+   height: 20vw;
+   width: 20vw;
+   border-radius:12px 12px 0px 0px;
+   border:rounded;
+
+   /*changes tp parent percentages*/
+}
+.title {
+    /*diff between padding and align*/
+    margin-left:1vw;
+    font-size: 1vw;
+}
+.creator {
+    margin-left:1vw;
+    font-size: 1vw;
 }

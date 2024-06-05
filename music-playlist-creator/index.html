@@ -9,18 +9,43 @@
     
     <link rel="stylesheet" href="style.css">
 </head>
+<!-- things to keep in mind: 
+    playlist
+    song id
+        randomize id to shuffle?-->
 <body>
     <header>
         <!-- Your header content here -->
+        <h2 id="header"> Music Playlist Explorer</h2>
     </header>
-
     <main> 
         <!-- Your main content here -->
-    </main>
+        <container class="playlist-cards">
+     
+            <!--calc dimensions based on screen px -->
+            <div class="card">
+                <img class="image" src="assets/img/playlist.png" alt="oops">
+                <h3 class="title">Playlist Title </h3>
+                <h4 class="creator">Creator Name</h4>
+            </div>
+            <div class="card">
+                <img class="image" src="assets/img/playlist.png" alt="oops">
+                <h3 class="title">Playlist Title </h3>
+                <h4 class="creator">Creator Name</h4>
+            </div>
+            <div class="card">
+                <img class="image" src="assets/img/playlist.png" alt="oops">
+                <h3 class="title">Playlist Title </h3>
+                <h4 class="creator">Creator Name</h4>
+            </div>
 
+        </container>
+    </main>
     <footer>
         <!-- Your footer content here -->
     </footer>
+
+    
     <script src="data/data.js"></script>
     <script src="script.js"></script>
 </body>
