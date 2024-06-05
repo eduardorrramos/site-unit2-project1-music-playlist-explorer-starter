@@ -11,7 +11,16 @@ body {
     padding: 10px;
 }
 .playlist-cards{
-    width:100%
+    width:100%;
+    height:100%;
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+   
+}
+.flex{
+    justify-content: space-evenly;
+    align-items:space-evenly;
 }
 .card {
     background-color:#FFCCCC;
@@ -19,22 +28,28 @@ body {
     border: rounded;
     width: 20vw;
     height: 30vw;
-    
+    margin:0.5em;
+}
+.card:hover{
+    background-color: pink;
 }
 .image{
    height: 20vw;
    width: 20vw;
    border-radius:12px 12px 0px 0px;
+   /*border-radius: 10px;*/
    border:rounded;
-
    /*changes tp parent percentages*/
 }
 .title {
     /*diff between padding and align*/
-    margin-left:1vw;
-    font-size: 1vw;
+    margin-left:1.2vw;
+    font-size: 1.25vw;
 }
 .creator {
-    margin-left:1vw;
+    margin-left:1.2vw;
     font-size: 1vw;
+}
+.modal-overlay{
+    
 }
