@@ -60,7 +60,7 @@ let data = { "playlists": [
           "title": "One Dance",
           "artist": "Drake",
           "album": "Views",
-          "cover_art": "https://picsum.photos/id/21/200,
+          "cover_art": "https://picsum.photos/id/21/200",
           "duration": "2:53"
         },
         {
@@ -441,24 +441,4 @@ let data = { "playlists": [
       ]
     }
   ]
-}
-var modal = document.getElementById("festivalModal");
-var span = document.getElementsByClassName("close")[0];
-
-function openModal(festival) {
-   document.getElementById('festivalName').innerText = festival.name;
-   document.getElementById('festivalImage').src = festival.imageUrl;
-   document.getElementById('festivalDates').innerText = `Dates: ${festival.dates}`;
-   document.getElementById('festivalLocation').innerText = `Location: ${festival.location}`;
-   document.getElementById('artistLineup').innerHTML = `<strong>Lineup:</strong> ${festival.lineup.join(', ')}`;
-   modal.style.display = "block";
-}
-
-span.onclick = function() {
-   modal.style.display = "none";
-}
-window.onclick = function(event) {
-   if (event.target == modal) {
-      modal.style.display = "none";
-   }
 }
