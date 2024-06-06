@@ -1,6 +1,7 @@
 var modal=document.getElementById("modal");
 var btn=document.getElementById("button");
 var close=document.getElementsByClassName("close");
+// class name verusus id, specifies array as opposed to a single element
 
 var modalclose=document.getElementById("modalclose");
 
