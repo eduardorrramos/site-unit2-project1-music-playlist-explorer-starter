@@ -94,7 +94,7 @@ body {
   border: 1px solid #ea1111;
   width: 80%; /* Could be more or less, depending on screen size */
 }
-.close {
+#close {
     /* display: none; */
     color: #aaa;
     float: right;
