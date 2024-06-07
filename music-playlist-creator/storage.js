@@ -1,88 +1,95 @@
 var card_container = document.getElementById("playlist-cards")
-var modal=document.getElementById("modal");
 var modal_content = document.getElementById("modal_content")
 
-function main(allplaylists){
-    for (let index= 0; index < 9; index ++) {
+function main(playlistdatajson){
+/*console.log(playlistdatajson);*/
+
+for (let index= 0; index < playlistdatajson.length; index ++) {
     
-        let one = allplaylists[index];
-        card_container.innerHTML +=
+    let one = playlistdatajson[index];
+    // console.log(one.songs[0])
+    // console.log(one.songs)
+    // console.log(one)
+    let oneid = one.playlistID;
+    // console.log(oneid)
+    /*one.songs look at structure presented in data.js, songs for 
+    one playlist already, [0] getting speciifc songs
+     <div class="card">
+                <img class="image" src="assets/img/playlist.png" alt="oops">
+                <h3 class="title">Playlist Title </h3>
+                <h4 class="creator">Creator Name</h4>
+            </div>
+            */
+    // const list = createNewElement
+    // POPULATE CARD BY ID NUMBER HERE id "playlist-cards"->
+    // make container, or get data from array to only populate one
+    card_container.innerHTML +=
     `<div class="card" id="${oneid}">
         <img class="image" src="${one.playlist_art}" alt = "oops">
         <div class="title">${one.playlist_name}</div>
         <p class="creator">${one.playlist_creator}</p>
-        <p class="likecount">${one.likeCount}</p>
-        </div>
+        <p>${one.likeCount}</p>
+        <p>${one.playlistID}</p>
+        
+    </div>
         `;
-        }
-
-
-    for (let index = 0; index < 9; index++) {
-        const cardElement = document.getElementById(index);
-    let cardid = cardElement.id;
-    cardElement.addEventListener('click', () => {
-       btnonclick(index, cardid);
-    });}
-    //     let one = allplaylists[index];
-    //     let oneid = one.playlistID;
-    //     const cardElement = document.getElementById(index);
-    // cardElement.addEventListener('click', () => { open(one);
-    // });
-    // function open(onecard){
-    //     console.log(filler)
+        // <p>${one.songs}</p></div>
+        // playlistdatajson[index].addEventListener('click', () =>{
+            // document.style.display: "block";
+        // });
+        // playlistList.appendChild(listItem);
+    // function opensongs(){
+        // document.style.display = "block";
     // }
-    // for (let index= 0; index < 9; index ++) {
-    //     let onecard = allplaylists[index];
-    //     let onecardsongs = onecard.songs;
-    //     for (let i = 0; i < onecardsongs.length; i++) {
-    //         let onesong = onecardsongs[i];
-    
-    //     modal_content.innerHTML +=
-    //     `<div class="song">
-    //     <img src="${onesong.cover_art}" alt="Song cover art">
-    //     <div class="info">
-    //         <h3 class="title">${onesong.title}</h3>
-    //         <p class="artist">${onesong.artist}</p>
-    //         <p class="album">${onesong.album}</p>
-    //     </div>
-    // </div>`;
-    //     }
-    // }
+/*for (let index= 0; index < playlists.len(); index ++) {
+    playlists[index].addEventListener('click', (event) => {
+    }
+}*/
 }
-
-// var card_container = document.getElementById("playlist-cards");
-// function main(allplaylists){
-
-//     let oneplaylist = data.playlists[0];
-//     let oneplaylistid = oneplaylist.playlistID;
-// for (let index= 0; index < 9; index ++) {
-//     oneplaylist = data.playlists[index];
-//     oneplaylistid = oneplaylist.playlistID;
-
-//     card_container.innerHTML +=
-//     `<div class="card" id="${oneplaylistid}">
-//         <img class="image" src="${oneplaylist.playlist_art}" alt = "oops">
-//         <div class="title">${oneplaylist.playlist_name}</div>
-//         <p class="creator">${oneplaylist.playlist_creator}</p>
-//         <div hjirvnccivuijggjtrgdkktbtbnfievtass="like-button" id="${oneplaylistid}">
-//         <span>&#x2764;&#xFE0F;</span>
-//         </div>
-//         <p class="likecount">${oneplaylist.likeCount}</p>
-//         </div>
-//         `;
-//         const cardElement = document.getElementById(oneplaylistid);
-//     cardElement.addEventListener('click', () => {
-//       btnonclick(index, oneplaylistid);
-    // oneplaylist.addEventListener('click', () => {
-    // btnonclick(index, cardid);
+for (let index = 0; index < playlistdatajson.length; index++) {
     
-
-// for (let index = 0; index < 9; index++) {
-//     let cardElement = document.getElementById(index);
-//     let cardid = cardElement.id;
-//     cardElement.addEventListener('click', () => {
-//        btnonclick(index, cardid);
-//     //    btnonclick(index, data.playlists[index].playlistID);
-//     });
+    let one = playlistdatajson[index];
+    let oneid = one.playlistID;
+    // console.log(onecard);
+    // console.log(onecardid);
+    const cardElement = document.getElementById(oneid);
+    cardElement.addEventListener('click', () => {
+        openplaylist(oneid);
+    });
+    // let grr = document.getElementById(index).addEventListener('click', open(onecardid));
+    // console.log(grr);
+    // 
+}
+// function open(onecard){
+//     // console.log(filler)
+//     // modal.style.display = "block";
 // }
-
+// CHANGE THIS INDEX CHANGE THIS INDEX CHANGE THE PARAMETER THE GREATER EQUAL
+// const allcards = card_container.getElementsByClassName("card");
+// console.log(allcards);
+// allcards.forEach()hudiikvfgtebceckrlkeldnfiirudrtjbgkhvhkkgliugglhkciutkdceihdhhkt
+function populate(song){
+    modal_content.innerHTML +=
+    `<div class="song">
+    <img src="${song.cover_art}" alt="Song cover art">
+    <div class="info">
+        <h3 class="title">${song.title}</h3>
+        <p class="artist">${song.artist}</p>
+        <p class="album">${song.album}</p>
+    </div>
+</div>`;
+btn.onclick()
+} /*now need to pass id into openplaylist*/
+function openplaylist(givenid) {
+    let oneplaylist=playlistdatajson[givenid];
+    let arrayofsongs=oneplaylist.songs;
+    // console.log(arrayofsongs);
+    arrayofsongs.forEach(populate);
+}
+console.log("right before openplay in main")
+// openplaylist(3)
+} // end of main
+main(data.playlists);
+// console.log(data.playlists[0].songs);
+// console.log(" outside of main")
+// openplaylist(2)
