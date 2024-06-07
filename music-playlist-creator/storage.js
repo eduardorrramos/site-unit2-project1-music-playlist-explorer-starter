@@ -24,15 +24,19 @@ for (let index= 0; index < playlistdatajson.length; index ++) {
     // POPULATE CARD BY ID NUMBER HERE id "playlist-cards"->
     // make container, or get data from array to only populate one
     card_container.innerHTML +=
+    
     `<div class="card" id="${oneid}">
         <img class="image" src="${one.playlist_art}" alt = "oops">
         <div class="title">${one.playlist_name}</div>
         <p class="creator">${one.playlist_creator}</p>
         <p>${one.likeCount}</p>
-        <p>${one.playlistID}</p>
+        <button id="heart">&#x2764;&#xFE0F;</button>
+
         
     </div>
         `;
+        
+        // <p>${one.playlistID}</p>
         // <p>${one.songs}</p></div>
         // playlistdatajson[index].addEventListener('click', () =>{
             // document.style.display: "block";
@@ -46,6 +50,11 @@ for (let index= 0; index < playlistdatajson.length; index ++) {
     }
 }*/
 }
+/*go thru array of heart buttons*/
+var heart = document.getElementsByClassName("heart");
+
+
+
 for (let index = 0; index < playlistdatajson.length; index++) {
     
     let one = playlistdatajson[index];
@@ -56,6 +65,7 @@ for (let index = 0; index < playlistdatajson.length; index++) {
     cardElement.addEventListener('click', () => {
         openplaylist(oneid);
     });
+    
     // let grr = document.getElementById(index).addEventListener('click', open(onecardid));
     // console.log(grr);
     // 
