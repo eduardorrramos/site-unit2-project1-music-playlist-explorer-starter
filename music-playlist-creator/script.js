@@ -1,18 +1,29 @@
 var modal=document.getElementById("modal");
 var btn=document.getElementById("button");
 var close=document.getElementById("close");
+
+function increment(heart){
+    heart.addEventListener('click', stopbehindopening);    
+    data.playlist[id].likeCount += 1; 
+}
+
+function stopbehindopening(){
+    modal.style.display ="none";
+    // update like
+}
+var hearts = document.getElementsByClassName("heart");
+hearts.forEach(increment);
+
 // class name verusus id, specifies array as opposed to a single element
 
-var modalclose=document.getElementById("modalclose");
+// var modalclose=document.getElementById("modalclose");
 
 btn.onclick = function() {
     modal.style.display = "block";
-    console.log("opening")
     // close.style.display = "block";
 }
 
 close.onclick = function() {
-    console.log("closing")
     modal.style.display = "none";
     var abouttoclear = document.getElementsByClassName("modal_content");
     abouttoclear[0].innerHTML = "";

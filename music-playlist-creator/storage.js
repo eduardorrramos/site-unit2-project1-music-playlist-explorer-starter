@@ -29,10 +29,8 @@ for (let index= 0; index < playlistdatajson.length; index ++) {
         <img class="image" src="${one.playlist_art}" alt = "oops">
         <div class="title">${one.playlist_name}</div>
         <p class="creator">${one.playlist_creator}</p>
-        <p>${one.likeCount}</p>
+        <p class="likecount">${one.likeCount}</p>
         <button id="heart">&#x2764;&#xFE0F;</button>
-
-        
     </div>
         `;
         
@@ -50,10 +48,6 @@ for (let index= 0; index < playlistdatajson.length; index ++) {
     }
 }*/
 }
-/*go thru array of heart buttons*/
-var heart = document.getElementsByClassName("heart");
-
-
 
 for (let index = 0; index < playlistdatajson.length; index++) {
     
@@ -96,7 +90,7 @@ function openplaylist(givenid) {
     // console.log(arrayofsongs);
     arrayofsongs.forEach(populate);
 }
-console.log("right before openplay in main")
+// console.log("right before openplay in main")
 // openplaylist(3)
 } // end of main
 main(data.playlists);
