@@ -53,13 +53,27 @@ body {
     /*diff between padding and align*/
     color:white;
     margin-top:5px;
-    margin-left:1.2vw;
+    margin-left:1vw;
     font-size: 15px;
 }
 .creator {
     color:white;
+    margin-left:1vw;
+    font-size: 10px;
+}
+.likecount {
+    color:white;
     margin-left:1.2vw;
     font-size: 10px;
+}
+.song{
+    width:50%;
+    height:50%;
+    
+    display:block; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .modal{
     display: none; /* Hidden by default */
