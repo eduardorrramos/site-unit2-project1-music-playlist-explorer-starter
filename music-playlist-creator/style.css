@@ -6,7 +6,7 @@ body {
 }
 /* remember dot is tag, access to rest is **/
 #header {
-    font-family: 'sans-serif';
+    font-family: 'Arial';
     background: #FFF5F5;  /* FFF5F5 */
     padding: 10px;
 }
