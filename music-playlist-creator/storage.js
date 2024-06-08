@@ -7,47 +7,39 @@ function main(playlistdatajson){
 for (let index= 0; index < playlistdatajson.length; index ++) {
     
     let one = playlistdatajson[index];
-    // console.log(one.songs[0])
-    // console.log(one.songs)
-    // console.log(one)
     let oneid = one.playlistID;
-    // console.log(oneid)
-    /*one.songs look at structure presented in data.js, songs for 
-    one playlist already, [0] getting speciifc songs
-     <div class="card">
-                <img class="image" src="assets/img/playlist.png" alt="oops">
-                <h3 class="title">Playlist Title </h3>
-                <h4 class="creator">Creator Name</h4>
-            </div>
-            */
-    // const list = createNewElement
-    // POPULATE CARD BY ID NUMBER HERE id "playlist-cards"->
-    // make container, or get data from array to only populate one
     card_container.innerHTML +=
     
-    `<div class="card" id="${oneid}">
+    `<div class="card" id=${oneid}>
         <img class="image" src="${one.playlist_art}" alt = "oops">
         <div class="title">${one.playlist_name}</div>
         <p class="creator">${one.playlist_creator}</p>
         <p class="likecount">${one.likeCount}</p>
-        <button id="heart">&#x2764;&#xFE0F;</button>
+        <button id=${oneid} onclick="increment${oneid}" class="heart">&#x2764;&#xFE0F;</button>
     </div>
         `;
-        
-        // <p>${one.playlistID}</p>
-        // <p>${one.songs}</p></div>
-        // playlistdatajson[index].addEventListener('click', () =>{
-            // document.style.display: "block";
-        // });
-        // playlistList.appendChild(listItem);
-    // function opensongs(){
-        // document.style.display = "block";
-    // }
-/*for (let index= 0; index < playlists.len(); index ++) {
-    playlists[index].addEventListener('click', (event) => {
-    }
-}*/
 }
+/*go thru array of heart buttons*/
+const hearts = document.getElementsByClassName("heart");
+for (let i =0 ; i < hearts.length; i++) {
+    hearts[i].onclick = function() {
+    increment(this); }
+    }
+// }
+function increment(heart) {
+    index = heart.id;
+    data.playlists[index].likeCount += 1;
+    const likeCountElement = document.getElementById(`${index}-likecount`);
+    likeCountElement.innerText = data.playlists[index].likeCount;
+}
+// increment()
+    //event.target.parentNode.likeCount += 1;
+    /*bc this extracts ^ id from parent so get playlist id*/
+    /* if false, want to update liekcount*/
+    // event.target.parentNode.likeCount += 1; no need to update bc cyrrently off
+    // console.log(event.target.parentNode.id)
+
+
 
 for (let index = 0; index < playlistdatajson.length; index++) {
     
@@ -76,11 +68,11 @@ function populate(song){
     modal_content.innerHTML +=
     `<div class="song">
     <img src="${song.cover_art}" alt="Song cover art">
-    <div class="info">
+    
         <h3 class="title">${song.title}</h3>
         <p class="artist">${song.artist}</p>
         <p class="album">${song.album}</p>
-    </div>
+   
 </div>`;
 btn.onclick()
 } /*now need to pass id into openplaylist*/
@@ -90,7 +82,7 @@ function openplaylist(givenid) {
     // console.log(arrayofsongs);
     arrayofsongs.forEach(populate);
 }
-// console.log("right before openplay in main")
+console.log("right before openplay in main")
 // openplaylist(3)
 } // end of main
 main(data.playlists);

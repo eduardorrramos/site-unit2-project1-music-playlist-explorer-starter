@@ -23,6 +23,17 @@ body {
    /* flex-direction:row; */
    /* flex-wrap:wrap; */
 }
+.heart{
+    background-color: whitesmoke; /* Green */
+    border: white;
+    border-width: 3 px;
+    color: white;
+    margin:10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+}
 .flex{
     justify-content: space-evenly;
     align-items:space-evenly;
@@ -79,15 +90,15 @@ body {
     font-size: 12px;
 
 }
-/* .song{
-    width:50%;
+.song{
+    width:200px;
     height:50%;
     
-    display:block; 
+    display:flex; 
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-} */
+}
 .modal{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -110,7 +121,7 @@ body {
 .like-button {
     cursor: pointer;
     justify-content: center;
-    margin-left: 10px;
+    margin-left: 50px;
   }
   .like-button:hover span {
     background-color: red;
@@ -129,4 +140,20 @@ body {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+.artist{
+    color:white;
+    margin-top:5px;
+    margin-left:8px;
+    font-size: 15px;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.album{
+    color:white;
+    margin-top:5px;
+    margin-left:8px;
+    font-size: 15px;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
 }

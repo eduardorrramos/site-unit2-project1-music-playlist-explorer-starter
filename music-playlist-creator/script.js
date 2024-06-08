@@ -2,17 +2,6 @@ var modal=document.getElementById("modal");
 var btn=document.getElementById("button");
 var close=document.getElementById("close");
 
-function increment(heart){
-    heart.addEventListener('click', stopbehindopening);    
-    data.playlist[id].likeCount += 1; 
-}
-
-function stopbehindopening(){
-    modal.style.display ="none";
-    // update like
-}
-var hearts = document.getElementsByClassName("heart");
-hearts.forEach(increment);
 
 // class name verusus id, specifies array as opposed to a single element
 
