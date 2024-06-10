@@ -2,44 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Music Playlist Explorer</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    
     <link rel="stylesheet" href="style.css">
 </head>
-<!-- things to keep in mind: 
-    playlist
-    song id
-        randomize id to shuffle?-->
 <body>
     <header>
-        <!-- Your header content here -->
-        <h2 id="header"> Music Playlist Explorer</h2>
-    </header>
+        <h2 id="header"> Music Playlist Explorer <a id="featuredtab" href="featured.html" onclick=startfeature()> Featured Playlist </a></h2>
+        <!-- a tag yesssss link the part of the thing-->
+    </header> 
     <main> 
-        <!-- Your main content here -->
         <container id="playlist-cards"></container>
-
-        <!-- contains my song cards at the intro screen -->
+        <div id="playlistbutton"></div>  <!--connected to button that opens modal -->
     </main>
-    
-    <!--<a class="model-toggle" href="#">Model Header</a>-->
-  <button id="button">Open Modal</button>
   <div id="modal" class="modal">
     <button id="close">&times;</button>
-
-    <container class="modal_content" id="modal_content">
-    </container>
+    <button id="shufflebutton">Shuffle Playlist</button>
+    <div class="modal_content" id="modal_content">
+       
+    </div>
   </div>
-
     <footer>
         <!-- Your footer content here -->
 
     </footer>
-
-    
     <script src="data/data.js"></script>
     <script src="script.js"></script>
     <script src="storage.js"></script>

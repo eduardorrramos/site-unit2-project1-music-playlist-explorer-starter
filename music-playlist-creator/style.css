@@ -1,16 +1,24 @@
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 30;
-    padding: 10;
     background-color: #FFE5E5;
 }
-/* remember dot is tag, access to rest is **/
+/* id is #, class and rest is #*/
+#featuredtab {
+    margin-left: 15px;
+}
 #header {
+    display:inline-flex;
+    flex-direction: row;
     font-family: 'sans-serif';
     background: #FFF5F5;  /* FFF5F5 */
     padding: 10px;
     color:#C21E56;
     border-radius:10px;
+}
+.heart{
+    margin-left: 10px;
+    height:20px;
+    width:20px;
+font-size: 20px;    
 }
 #playlist-cards{
     width:100%;
@@ -23,17 +31,7 @@ body {
    /* flex-direction:row; */
    /* flex-wrap:wrap; */
 }
-.heart{
-    background-color: whitesmoke; /* Green */
-    border: white;
-    border-width: 3 px;
-    color: white;
-    margin:10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-}
+
 .flex{
     justify-content: space-evenly;
     align-items:space-evenly;
@@ -49,10 +47,12 @@ body {
     /* height: 30vw; */
     height:300px;
     margin:0.5em;
-    
 }
 .card:hover{
-    background-color: #FAC0CB;
+    background-color: purple;
+}
+.card:focus{
+    background-color: #ea1111;
 }
 .image{
    /* height: 20vw; */
@@ -62,6 +62,7 @@ body {
    border-radius:12px 12px 0px 0px;
    /*border-radius: 10px;*/
    border:rounded;
+   background-color: rgba(0, 0, 0, 0.8); /* Gray overlay with 50% opacity */
    /*changes tp parent percentages*/
 }
 .title {
@@ -73,32 +74,112 @@ body {
     font-weight:bold;
     font-family: Arial, Helvetica, sans-serif;
 }
+.playlistimage {
+    height: 200px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.5); /* Gray overlay with 50% opacity */
+}
 
+.playlistinfo {
+    font-size: 30px;
+}
 .creator {
     color:white;
     margin-left:8px;
     font-size: 12px;
+    margin-bottom: 0;
 }
 .likecount {
     color:white;
     padding-left: 10px;
-    font-size: 10px;
+    font-size: 20px;
 }
 .likes{
     color:white;
     margin-left:8px;
     font-size: 12px;
-
+}
+.playlist{
+    display:inline-block;
+    /* flex-direction: column; */
+    border:solid;
+    border-radius: 5px;
+    background-color: pink;
+    height:300;
+    width:400px;
+    margin-bottom: 20px;
+    margin-left: 2vw;
+    margin-right:4vw;
+    padding:10px
+}
+.together{
+    display:flex;
+    flex-direction: row;
 }
 .song{
-    width:200px;
-    height:50%;
-    
-    display:flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+    display:flex;
+    /* flex-direction: column; */
+    border:solid;
+    border-radius: 5px;
+    background-color: pink;
+    height:115px;
+    width:300px;
+    margin-bottom: 20px;
+    margin-left: 4vw;
+    padding:10px
+
 }
+.songimage{
+    width:120px;
+    height:100px;
+    padding-top:10px;
+}
+.songtitle, .songartist, .songalbum, .songduration{
+    font-size: 12px;
+}
+.songid{
+    display: none;
+}
+.songinfo{
+    margin-left: 2vw;
+}
+.modal_content{
+    background-color: pink;
+    margin: 0% auto; /* 15% from the top and centered */
+    border: 1px solid black;
+    border-width: 2px;
+    padding-top: 18px;
+    width: 500px; /* Could be more or less, depending on screen size */
+    
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  .featuremodal{
+    display: flex;
+    color:white;
+    font-size: 15px;
+    font-weight:bold;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: pink;
+    margin: 3vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: "block";
+    border-radius: 18px;
+    border: rounded;
+    /* width: 20vw;  */
+    border: 5px solid #F33A6A;
+  }
+  .featuretitle, .featureartist {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  .featuretitle {
+    font-size: 20px;
+    padding-top: 10px;
+  }
 .modal{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -108,15 +189,7 @@ body {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(183, 6, 6); /* Fallback color */
-    background-color: rgba(21, 202, 46, 0.4); /* Black w/ opacity */
-}
-.modal-content{
-  background-color: #55dd11;
-  margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
-  border: 1px solid #ea1111;
-  width: 80%; /* Could be more or less, depending on screen size */
+    background-color: rgba(255, 192, 203, 0.8); /* Black w/ opacity */
 }
 .like-button {
     cursor: pointer;
@@ -141,7 +214,7 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
-.artist{
+/* .artist{
     color:white;
     margin-top:5px;
     margin-left:8px;
@@ -156,4 +229,4 @@ body {
     font-size: 15px;
     font-weight:bold;
     font-family: Arial, Helvetica, sans-serif;
-}
+} */
