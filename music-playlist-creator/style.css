@@ -38,7 +38,7 @@ font-size: 20px;
 }
 .card {
 
-    background-color:#FFCCCC;
+    background-color:palevioletred;
     border-radius: 18px;
     border: rounded;
     /* width: 20vw;  */
@@ -104,7 +104,7 @@ font-size: 20px;
     /* flex-direction: column; */
     border:solid;
     border-radius: 5px;
-    background-color: pink;
+    background-color: palevioletred;
     height:300;
     width:400px;
     margin-bottom: 20px;
@@ -121,13 +121,17 @@ font-size: 20px;
     /* flex-direction: column; */
     border:solid;
     border-radius: 5px;
-    background-color: pink;
+    background-color: rgb(220, 105, 124);
     height:115px;
     width:300px;
     margin-bottom: 20px;
     margin-left: 4vw;
     padding:10px
 
+}
+.delete{
+    margin-left: 9px;
+    margin-top: 22px;
 }
 .songimage{
     width:120px;

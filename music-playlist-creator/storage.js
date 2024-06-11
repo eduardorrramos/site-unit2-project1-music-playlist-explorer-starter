@@ -35,9 +35,16 @@ for (let index= 0; index < playlistdatajson.length; index ++) {
         <p class="creator">${one.playlist_creator}</p>
         <div class="together">
         <p class="likecount">${one.likeCount}</p>
-        <p class="heart" id=${oneplaylistid} >💿</p> </div>
+        <p class="heart" id=${oneplaylistid} >💿</p> 
+        <p class="delete" id=${oneplaylistid} >❌</p></div>
         </div>
         `;
+}
+function deletecard(playlistid) {
+    const myElement = document.getElementsByClassName(`card`);
+    let mycard = myElement[playlistid];
+    console.log(mycard);
+    mycard.style.display='none';
 }
 /* adds event listener to each main screen playlist, either modal opens or like count increments if card or like button are pressed*/
 for (let index = 0; index < playlistdatajson.length; index++) {
@@ -47,6 +54,9 @@ for (let index = 0; index < playlistdatajson.length; index++) {
     cardcontainer.addEventListener('click', function(event) {
         if (event.target.classList.contains('heart')) {
             increment(oneplaylistid);
+        }
+        else if (event.target.classList.contains('delete')) {
+            deletecard(oneplaylistid);
         }
        else {
         openplaylist(oneplaylistid);
@@ -87,6 +97,7 @@ function openplaylist(oneplaylistid) {
 
 function startfeature() {
 var featured = document.getElementById("featuremodal");
+console.log(featured);
 let one = data.playlists[1];
 let oneplaylistid = one.playlistID;
 if (featured) {
@@ -100,6 +111,7 @@ featured.innerHTML +=
 }
 
 }
+ 
 
   
 // let featuredplaylist = data.playlists[0];
