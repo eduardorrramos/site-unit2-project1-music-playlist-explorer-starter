@@ -109,16 +109,6 @@ featured.innerHTML +=
     </div>
     `;
 }
-
 }
- 
-
-  
-// let featuredplaylist = data.playlists[0];
-// featuremodal.innerHTML = ""
-// featuremodal.innerHTML += 
-// '<img src="${featuredplaylist.playlist_art"}> ';
-
-} // end of main
-
+}
 main(data.playlists);

@@ -3,8 +3,6 @@ var btn=document.getElementById("playlistbutton");
 var close=document.getElementById("close");
 var shufflebutton = document.getElementById("shufflebutton");
 var abouttoclear = document.getElementsByClassName("modal_content");
-
- 
 // class name verusus id, specifies array as opposed to a single element
 // var modalclose=document.getElementById("modalclose");
 function populate(song){
@@ -54,6 +52,4 @@ shufflebutton.onclick = function() {
     <p class="songartist">${oneplaylist.playlist_creator}</p></div>
     </div>`;
     arrayofsongs.forEach(populate);        
-    // how none affects event listeners, if not j pivot into 
-    // manually adding event listener myself, hidden, click event listener
 }

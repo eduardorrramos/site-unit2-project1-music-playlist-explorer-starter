@@ -1,7 +1,6 @@
 body {
     background-color: #FFE5E5;
 }
-/* id is #, class and rest is #*/
 #featuredtab {
     margin-left: 15px;
 }
@@ -9,7 +8,7 @@ body {
     display:inline-flex;
     flex-direction: row;
     font-family: 'sans-serif';
-    background: #FFF5F5;  /* FFF5F5 */
+    background: #FFF5F5;  
     padding: 10px;
     color:#C21E56;
     border-radius:10px;
@@ -27,24 +26,17 @@ font-size: 20px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-   /* display:flex; */
-   /* flex-direction:row; */
-   /* flex-wrap:wrap; */
 }
-
 .flex{
     justify-content: space-evenly;
     align-items:space-evenly;
 }
 .card {
-
     background-color:palevioletred;
     border-radius: 18px;
     border: rounded;
-    /* width: 20vw;  */
     width: 180px;
     border: 5px solid #F33A6A;
-    /* height: 30vw; */
     height:300px;
     margin:0.5em;
 }
@@ -55,18 +47,13 @@ font-size: 20px;
     background-color: #ea1111;
 }
 .image{
-   /* height: 20vw; */
    height:180px;
-   /* width: 20vw; */
    width:180px;
    border-radius:12px 12px 0px 0px;
-   /*border-radius: 10px;*/
    border:rounded;
-   background-color: rgba(0, 0, 0, 0.8); /* Gray overlay with 50% opacity */
-   /*changes tp parent percentages*/
+   background-color: rgba(0, 0, 0, 0.8); 
 }
 .title {
-    /*diff between padding and align*/
     color:white;
     margin-top:5px;
     margin-left:8px;
@@ -77,7 +64,7 @@ font-size: 20px;
 .playlistimage {
     height: 200px;
     width: 200px;
-    background-color: rgba(0, 0, 0, 0.5); /* Gray overlay with 50% opacity */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .playlistinfo {
@@ -101,7 +88,6 @@ font-size: 20px;
 }
 .playlist{
     display:inline-block;
-    /* flex-direction: column; */
     border:solid;
     border-radius: 5px;
     background-color: palevioletred;
@@ -118,7 +104,6 @@ font-size: 20px;
 }
 .song{
     display:flex;
-    /* flex-direction: column; */
     border:solid;
     border-radius: 5px;
     background-color: rgb(220, 105, 124);
@@ -127,7 +112,6 @@ font-size: 20px;
     margin-bottom: 20px;
     margin-left: 4vw;
     padding:10px
-
 }
 .delete{
     margin-left: 9px;
@@ -149,11 +133,11 @@ font-size: 20px;
 }
 .modal_content{
     background-color: pink;
-    margin: 0% auto; /* 15% from the top and centered */
+    margin: 0% auto; 
     border: 1px solid black;
     border-width: 2px;
     padding-top: 18px;
-    width: 500px; /* Could be more or less, depending on screen size */
+    width: 500px; 
     
     display:flex;
     flex-direction: column;
@@ -173,7 +157,6 @@ font-size: 20px;
     display: "block";
     border-radius: 18px;
     border: rounded;
-    /* width: 20vw;  */
     border: 5px solid #F33A6A;
   }
   .featuretitle, .featureartist {
@@ -185,15 +168,15 @@ font-size: 20px;
     padding-top: 10px;
   }
 .modal{
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none; 
+    position: fixed; 
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgba(255, 192, 203, 0.8); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(255, 192, 203, 0.8); 
 }
 .like-button {
     cursor: pointer;
@@ -206,7 +189,6 @@ font-size: 20px;
     cursor: pointer;
   }
   .close {
-    /* display: none; */
     color: #aaa;
     float: right;
     font-size: 18px;
@@ -218,19 +200,3 @@ font-size: 20px;
   text-decoration: none;
   cursor: pointer;
 }
-/* .artist{
-    color:white;
-    margin-top:5px;
-    margin-left:8px;
-    font-size: 15px;
-    font-weight:bold;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.album{
-    color:white;
-    margin-top:5px;
-    margin-left:8px;
-    font-size: 15px;
-    font-weight:bold;
-    font-family: Arial, Helvetica, sans-serif;
-} */
