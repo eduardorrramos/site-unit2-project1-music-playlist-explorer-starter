@@ -4,7 +4,7 @@ Submitted by: **EDUARDO RAMOS**
 
 Estimated time spent: **40** hours spent in total
 
-Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LINK_HERE)
+Deployed Application (optional): [N/A](ADD_LINK_HERE)
 
 ### Application Features
 
@@ -52,7 +52,7 @@ Deployed Application (optional): [Music Playlist Explorer Deployed Site](ADD_LIN
 
 `TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video actually renders and is playable when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
 
-`https://drive.google.com/file/d/1vtoL63WOaojejbDaMjcdr8bhUhGbP1I7/view?usp=sharing` embedded permission not allowed
+`https://www.loom.com/share/5ad6cb24866547a58d7c10a96f208b16?sid=42aec8bb-b0f3-432e-a711-f01990643622` embedded permission not allowed
 
 ### Reflection
 
